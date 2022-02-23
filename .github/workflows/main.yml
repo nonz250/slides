@@ -1,0 +1,19 @@
+name: GitHub Pages for Slide
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Build and Deploy to Github Pages
+      uses: ralexander-phi/marp-action@master
+      env:
+        MARP_ARGS: "-I slides -o docs"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        PUBLISH_TO_BRANCH: gh-pages
+        BASE_URL: https://${{ github.repository_owner }}.github.io
