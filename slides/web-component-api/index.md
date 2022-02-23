@@ -1,1 +1,0 @@
-## WEB Component APIについて
