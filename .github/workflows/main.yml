@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Copy Images to docs
+      run: cp -r slides/images docs/images
     - name: Build and Deploy to Github Pages
       uses: ralexander-phi/marp-action@master
       env:
