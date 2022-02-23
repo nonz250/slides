@@ -37,9 +37,9 @@ VueやReactとは別物っぽい。。？
 
 <div style="display: flex; justify-content: space-around; align-item: center;">
 
-![w:400](/slides/web-components-api/images/result_1.png)
+![w:400](/slides/images/web-components-api_1.png)
 
-![w:400](/slides/web-components-api/images/result_2.png)
+![w:400](/slides/images/web-components-api_2.png)
 
 </div>
 
