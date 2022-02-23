@@ -1,3 +1,3 @@
 ## Index
 
-* [Web Components API](web-components-api)
+* [このままいけるか？ Web Components API 🚀](web-components-api)
