@@ -16,8 +16,8 @@ jobs:
       run: exec $SHELL -l
     - name: Confirm LANG
       run: echo $LANG
-    - name: Install Japanese language pack
-      run: sudo apt install language-pack-ja
+    - name: Install font
+      run: sudo apt install fonts-noto
     - name: Install Node.js
       uses: actions/setup-node@v2
       with:
