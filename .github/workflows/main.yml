@@ -9,12 +9,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install fonts-noto
-      run: sudo apt install fonts-noto
+      run: sudo apt install language-pack-ja
     - uses: actions/setup-node@v2
       with:
         node-version: '16'
     - name: Generate OGP Images
-      run: npx @marp-team/marp-cli@latest -I slides -o docs --image jpeg
+      run: npx @marp-team/marp-cli@latest --lang ja -I slides -o docs --image jpeg
     - name: Copy Images to docs
       run: cp -r slides/images docs/images
     - name: Build and Deploy to Github Pages
