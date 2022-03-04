@@ -13,7 +13,7 @@ jobs:
     - name: Build and Deploy to Github Pages
       uses: ralexander-phi/marp-action@master
       env:
-        MARP_ARGS: "-I slides -o docs"
+        MARP_ARGS: "-I slides -o docs --image slides"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ github.repository }}
         PUBLISH_TO_BRANCH: gh-pages
