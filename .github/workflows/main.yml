@@ -8,13 +8,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install fonts-noto
+    - name: Install Japanese language pack
       run: sudo apt install language-pack-ja
-    - uses: actions/setup-node@v2
+    - name: Set Locale
+      run: sudo update-locale LANG=ja_JP.UTF-8
+    - name: Reboot terminal
+      run: exec $SHELL -l
+    - name: Confirm LANG
+      run: echo $LANG
+    - name: Install Japanese language pack
+      run: sudo apt install language-pack-ja
+    - name: Install Node.js
+      uses: actions/setup-node@v2
       with:
         node-version: '16'
     - name: Generate OGP Images
-      run: npx @marp-team/marp-cli@latest --lang ja -I slides -o docs --image jpeg
+      run: npx @marp-team/marp-cli@latest -I slides -o docs --image jpeg
     - name: Copy Images to docs
       run: cp -r slides/images docs/images
     - name: Build and Deploy to Github Pages
