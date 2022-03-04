@@ -5,3 +5,7 @@ up:
 .PHONY: down
 down:
 	docker rm --force marp
+
+.PHONY: login
+login:
+	docker exec -it marp ash
