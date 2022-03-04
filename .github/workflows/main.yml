@@ -8,14 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install Japanese language pack
-      run: sudo apt install language-pack-ja
-    - name: Set Locale
-      run: sudo update-locale LANG=ja_JP.UTF-8
-    - name: Reboot terminal
-      run: exec $SHELL -l
-    - name: Confirm LANG
-      run: echo $LANG
     - name: Install font
       run: sudo apt install fonts-noto
     - name: Install Node.js
