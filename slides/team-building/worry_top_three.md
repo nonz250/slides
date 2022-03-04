@@ -1,3 +1,8 @@
+---
+title: なってわかった リーダーの悩み3選 ✍️
+description: 新米リーダーの悩みを吐露します。リーダーだって悩むんだからね！
+image: https://nonz250.github.io/slides/team-building/worry_top_three.jpg
+---
 ### なってわかった
 
 # リーダーの悩み3選 ✍️

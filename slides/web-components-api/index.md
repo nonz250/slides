@@ -1,7 +1,7 @@
 ---
-title: このままいけるか？ Web Components API 🚀 
+title: このままいけるか？ Web Components API 🚀
 description: Web Components API を社内コンポーネントで利用したときの書き味や感想について簡単にまとめてみました。
-image: ./index.jpg
+image: https://nonz250.github.io/slides/web-components-api/index.jpg
 ---
 
 ### このままいけるか？
