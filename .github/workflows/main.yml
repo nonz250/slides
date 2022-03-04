@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install fonts-noto
+      run: sudo apt install fonts-noto
     - uses: actions/setup-node@v2
       with:
         node-version: '16'
