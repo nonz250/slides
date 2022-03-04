@@ -9,3 +9,7 @@ down:
 .PHONY: login
 login:
 	docker exec -it marp ash
+
+.PHONY: ogp
+ogp:
+	docker run --rm -itv ${PWD}:/home/marp/app marpteam/marp-cli --image jpeg slides
