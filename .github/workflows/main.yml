@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: '16'
     - name: Generate OGP Images
-      run: npx @marp-team/marp-cli@latest -I slides -o docs --image jpeg
+      run: npx @marp-team/marp-cli@1.6.0 -I slides -o docs --image jpeg
     - name: Copy Images to docs
       run: cp -r slides/images docs/images
     - name: Build and Deploy to Github Pages
