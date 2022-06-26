@@ -1,7 +1,7 @@
 ---
 title: PHP CS Fixer を使って強固なコードにしよう 🔍
 description: Web Components API を社内コンポーネントで利用したときの書き味や感想について簡単にまとめてみました。
-image: https://nonz250.github.io/slides/web-components-api/index.jpg
+image: https://nonz250.github.io/slides/php-cs-fixer/introduction_my_rules.jpg
 ---
 
 ### PHP CS Fixer を使って
