@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install font
-      run: sudo apt update && sudo apt install fonts-noto
+      run: sudo apt-get update && sudo apt-get install fonts-noto-cjk
 
     - name: Install Node.js
       uses: actions/setup-node@v2
