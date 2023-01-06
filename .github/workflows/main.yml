@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install font
-      run: sudo apt-get update && sudo apt-get install fonts-noto-cjk
+      run: sudo apt update && sudo apt install fonts-noto
 
     - name: Install Node.js
       uses: actions/setup-node@v2
@@ -23,11 +23,12 @@ jobs:
     - name: Copy Images to docs
       run: cp -r slides/images docs/images
 
-    - name: Build and Deploy to Github Pages
-      uses: ralexander-phi/marp-action@master
-      env:
-        MARP_ARGS: "-I slides -o docs"
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
-        PUBLISH_TO_BRANCH: gh-pages
-        BASE_URL: https://${{ github.repository_owner }}.github.io
+    - name: Build Marp
+      run: npx @marp-team/marp-cli@latest -I slides -o docs
+
+    - name: Deploy to Github Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
+        destination_dir: ./docs
